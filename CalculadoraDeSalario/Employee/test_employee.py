@@ -41,7 +41,7 @@ def test_create_invalid_role_employee():
     invalid_role = "Garbage Collector"
 
     with pytest.raises(Exception):
-        invalid_role_employee = Employee(invalid_role)
+        Employee(invalid_role)
 
 
 def test_create_employee_with_name():
@@ -65,7 +65,7 @@ def test_create_employee_with_base_salary():
     assert employee_with_salary.base_salary == base_salary
 
 
-def test_create_employee_with_invalid_base_salary():
+def test_create_employee_with_invalid_numeric_base_salary():
     invalid_base_salary = -500
 
     with pytest.raises(Exception):
