@@ -1,4 +1,4 @@
-ALLOWED_ROLES = ["Developer", "DBA"]
+ALLOWED_ROLES = ["Developer", "DBA", "Tester"]
 
 
 class Employee:
