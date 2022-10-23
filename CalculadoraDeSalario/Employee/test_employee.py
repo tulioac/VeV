@@ -49,3 +49,10 @@ def test_create_employee_with_name():
     named_employee = Employee(name=name)
 
     assert named_employee.name == name
+
+
+def test_create_employee_with_email():
+    email = "jarbinhas1854@bol.com.br"
+    employee_with_email = Employee(email=email)
+
+    assert employee_with_email.email == email
