@@ -108,3 +108,33 @@ def test_calculate_tester_salary_below_salary_threshold():
     tester_liquid_salary = base_salary * (1 - 0.15)
 
     assert tester_liquid_salary == salaryCalculator.calculate(employee)
+
+
+def test_calculate_manager_salary_over_salary_threshold():
+    base_salary = 6_000
+
+    employee = Employee(role="Manager", base_salary=base_salary)
+
+    manager_liquid_salary = base_salary * (1 - 0.3)
+
+    assert manager_liquid_salary == salaryCalculator.calculate(employee)
+
+
+def test_calculate_manager_salary_equals_salary_threshold():
+    base_salary = 5_000
+
+    employee = Employee(role="Manager", base_salary=base_salary)
+
+    manager_liquid_salary = base_salary * (1 - 0.3)
+
+    assert manager_liquid_salary == salaryCalculator.calculate(employee)
+
+
+def test_calculate_manager_salary_below_salary_threshold():
+    base_salary = 4_000
+
+    employee = Employee(role="Manager", base_salary=base_salary)
+
+    manager_liquid_salary = base_salary * (1 - 0.2)
+
+    assert manager_liquid_salary == salaryCalculator.calculate(employee)
