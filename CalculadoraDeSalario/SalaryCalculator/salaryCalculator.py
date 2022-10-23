@@ -18,6 +18,18 @@ class SalaryCalculator:
 
             return liquid_salary
 
+        elif employee_role == "Manager":
+            discount_value = 0.3
+
+            salary_threshold = 5_000
+
+            if employee_base_salary < salary_threshold:
+                discount_value = 0.2
+
+            liquid_salary = employee_base_salary * (1 - discount_value)
+
+            return liquid_salary
+
         else:
             discount_value = 0.25
 
