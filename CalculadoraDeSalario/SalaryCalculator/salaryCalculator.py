@@ -1,5 +1,29 @@
 from ..Employee.employee import Employee
 
+# salary_threshold, higher_discount, lower_discount
+roles_calculation_parameters = {
+    "Developer": [
+        3_000,
+        0.2,
+        0.1,
+    ],
+    "Manager": [
+        5_000,
+        0.3,
+        0.2,
+    ],
+    "DBA": [
+        2_000,
+        0.25,
+        0.15,
+    ],
+    "Tester": [
+        2_000,
+        0.25,
+        0.15,
+    ],
+}
+
 
 class SalaryCalculator:
     def __calculate_liquid_salary(
@@ -19,38 +43,15 @@ class SalaryCalculator:
         employee_role = employee.role
         employee_base_salary = employee.base_salary
 
-        if employee_role == "Developer":
-            salary_threshold = 3_000
-            higher_discount_value = 0.2
-            lower_discount_value = 0.1
+        [
+            salary_threshold,
+            higher_discount,
+            lower_discount,
+        ] = roles_calculation_parameters[employee_role]
 
-            return self.__calculate_liquid_salary(
-                base_salary=employee_base_salary,
-                salary_threshold=salary_threshold,
-                higher_discount=higher_discount_value,
-                lower_discount=lower_discount_value,
-            )
-
-        elif employee_role == "Manager":
-            salary_threshold = 5_000
-            higher_discount_value = 0.3
-            lower_discount_value = 0.2
-
-            return self.__calculate_liquid_salary(
-                base_salary=employee_base_salary,
-                salary_threshold=salary_threshold,
-                higher_discount=higher_discount_value,
-                lower_discount=lower_discount_value,
-            )
-
-        else:
-            salary_threshold = 2_000
-            higher_discount_value = 0.25
-            lower_discount_value = 0.15
-
-            return self.__calculate_liquid_salary(
-                base_salary=employee_base_salary,
-                salary_threshold=salary_threshold,
-                higher_discount=higher_discount_value,
-                lower_discount=lower_discount_value,
-            )
+        return self.__calculate_liquid_salary(
+            base_salary=employee_base_salary,
+            salary_threshold=salary_threshold,
+            higher_discount=higher_discount,
+            lower_discount=lower_discount,
+        )
