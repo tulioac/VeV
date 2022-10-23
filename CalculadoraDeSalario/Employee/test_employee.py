@@ -10,29 +10,35 @@ def test_exist_employee():
 
 
 def test_create_developer_employee():
-    developer = Employee("Developer")
+    role = "Developer"
+    developer = Employee(role)
 
-    assert developer.role == "Developer"
+    assert developer.role == role
 
 
 def test_create_dba_employee():
-    dba = Employee("DBA")
+    role = "DBA"
+    dba = Employee(role)
 
-    assert dba.role == "DBA"
+    assert dba.role == role
 
 
 def test_create_tester_employee():
-    dba = Employee("Tester")
+    role = "Tester"
+    dba = Employee(role)
 
-    assert dba.role == "Tester"
+    assert dba.role == role
 
 
 def test_create_manager_employee():
-    manager = Employee("Manager")
+    role = "Manager"
+    manager = Employee(role)
 
-    assert manager.role == "Manager"
+    assert manager.role == role
 
 
 def test_create_invalid_role_employee():
+    invalid_role = "Garbage Collector"
+
     with pytest.raises(Exception):
-        invalid_role_employee = Employee("Garbage Collector")
+        invalid_role_employee = Employee(invalid_role)
