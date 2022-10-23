@@ -42,3 +42,10 @@ def test_create_invalid_role_employee():
 
     with pytest.raises(Exception):
         invalid_role_employee = Employee(invalid_role)
+
+
+def test_create_employee_with_name():
+    name = "Jarbas"
+    named_employee = Employee(name=name)
+
+    assert named_employee == name
