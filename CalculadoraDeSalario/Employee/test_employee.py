@@ -70,3 +70,10 @@ def test_create_employee_with_invalid_numeric_base_salary():
 
     with pytest.raises(Exception):
         Employee(base_salary=invalid_base_salary)
+
+
+def test_create_employee_with_not_numeric_base_salary():
+    invalid_base_salary = "hello"
+
+    with pytest.raises(Exception):
+        Employee(base_salary=invalid_base_salary)
