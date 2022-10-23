@@ -28,3 +28,13 @@ def test_calculate_developer_salary_over_3000():
     developer_liquid_salary = base_salary * 0.8
 
     assert developer_liquid_salary == salaryCalculator.calculate(employee)
+
+
+def test_calculate_developer_salary_equals_3000():
+    base_salary = 3_000
+
+    employee = Employee(role="Developer", base_salary=base_salary)
+
+    developer_liquid_salary = base_salary * 0.8
+
+    assert developer_liquid_salary == salaryCalculator.calculate(employee)
