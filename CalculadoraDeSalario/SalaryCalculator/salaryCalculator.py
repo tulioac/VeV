@@ -6,5 +6,9 @@
 # Caso o cargo seja GERENTE, o funcionário terá desconto de 30% caso o salário seja maior ou igual que 5.000,00, ou apenas 20% caso o salário seja menor que isso.
 
 
+from ..Employee.employee import Employee
+
+
 class SalaryCalculator:
-    pass
+    def calculate(self, employee: Employee):
+        pass
