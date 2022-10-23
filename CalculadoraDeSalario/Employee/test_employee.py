@@ -56,3 +56,10 @@ def test_create_employee_with_email():
     employee_with_email = Employee(email=email)
 
     assert employee_with_email.email == email
+
+
+def test_create_employee_with_base_salary():
+    base_salary = 5000
+    employee_with_salary = Employee(base_salary=base_salary)
+
+    assert employee_with_salary.base_salary == base_salary
