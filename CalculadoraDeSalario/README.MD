@@ -15,8 +15,6 @@ Deve-se implementar uma calculadora de salário de funcionários. Um funcionári
 
 Implementação por: [Túlio](https://github.com/tulioac)
 
-O que foi bom? O que foi ruim? O que foi difícil? 
-
 O uso do TDD se mostrou bastante vantajoso para entregar confiança no código escrito, uma vez que para implementar uma funcionalidade, teve-se que se criar um teste que motivasse sua implementação e por esse motivo, a implementação era extremamente direcionada ao teste e não se codificou nada a mais do que o necessário para o teste. Com isso, obtive um sentimento que coesão do que estava sendo feito. 
 
 Além disso, o processo de criar uma implementação simplória para cada teste, possibilita que a pessoa desenvolvedora tenha um tempo para amadurecer uma implementação de maior qualidade e perceber também pontos que poderiam quebrar o sistema, dando espaço para criação de mais testes que vão garantir que o código não caia em situações problemáticas. 
