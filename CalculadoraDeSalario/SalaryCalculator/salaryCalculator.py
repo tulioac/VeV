@@ -21,6 +21,11 @@ class SalaryCalculator:
         else:
             discount_value = 0.25
 
+            salary_threshold = 2_000
+
+            if employee_base_salary < salary_threshold:
+                discount_value = 0.15
+
             liquid_salary = employee_base_salary * (1 - discount_value)
 
             return liquid_salary
