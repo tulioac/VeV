@@ -63,3 +63,10 @@ def test_create_employee_with_base_salary():
     employee_with_salary = Employee(base_salary=base_salary)
 
     assert employee_with_salary.base_salary == base_salary
+
+
+def test_create_employee_with_invalid_base_salary():
+    invalid_base_salary = -500
+
+    with pytest.raises(Exception):
+        Employee(base_salary=invalid_base_salary)
