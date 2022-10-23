@@ -13,3 +13,11 @@ def test_exist_calculate():
 
     salaryCalculator = SalaryCalculator()
     salaryCalculator.calculate(employee)
+
+
+def test_calculate_return():
+    employee = Employee()
+
+    salaryCalculator = SalaryCalculator()
+
+    assert salaryCalculator.calculate(employee) == 0
