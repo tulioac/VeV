@@ -20,7 +20,7 @@ def test_calculate_return():
     assert salaryCalculator.calculate(employee) == 0
 
 
-def test_calculate_developer_salary_over_3000():
+def test_calculate_developer_salary_over_salary_threshold():
     base_salary = 5_000
 
     employee = Employee(role="Developer", base_salary=base_salary)
@@ -30,7 +30,7 @@ def test_calculate_developer_salary_over_3000():
     assert developer_liquid_salary == salaryCalculator.calculate(employee)
 
 
-def test_calculate_developer_salary_equals_3000():
+def test_calculate_developer_salary_equals_salary_threshold():
     base_salary = 3_000
 
     employee = Employee(role="Developer", base_salary=base_salary)
@@ -40,7 +40,7 @@ def test_calculate_developer_salary_equals_3000():
     assert developer_liquid_salary == salaryCalculator.calculate(employee)
 
 
-def test_calculate_developer_salary_below_3000():
+def test_calculate_developer_salary_below_salary_threshold():
     base_salary = 2_000
 
     employee = Employee(role="Developer", base_salary=base_salary)
