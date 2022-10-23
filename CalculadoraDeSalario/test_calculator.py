@@ -1,4 +1,5 @@
 from .salaryCalculator import SalaryCalculator
+from .employee import Employee
 
 
 def test_exist_salary_calculator():
