@@ -27,6 +27,12 @@ def test_create_tester_employee():
     assert dba.role == "Tester"
 
 
+def test_create_manager_employee():
+    manager = Employee("Manager")
+
+    assert manager.role == "Manager"
+
+
 def test_create_invalid_role_employee():
     with pytest.raises(Exception):
         invalid_role_employee = Employee("Garbage Collector")
