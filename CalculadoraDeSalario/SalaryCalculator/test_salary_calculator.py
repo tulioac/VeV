@@ -25,7 +25,7 @@ def test_calculate_developer_salary_over_salary_threshold():
 
     employee = Employee(role="Developer", base_salary=base_salary)
 
-    developer_liquid_salary = base_salary * 0.8
+    developer_liquid_salary = base_salary * (1 - 0.2)
 
     assert developer_liquid_salary == salaryCalculator.calculate(employee)
 
@@ -35,7 +35,7 @@ def test_calculate_developer_salary_equals_salary_threshold():
 
     employee = Employee(role="Developer", base_salary=base_salary)
 
-    developer_liquid_salary = base_salary * 0.8
+    developer_liquid_salary = base_salary * (1 - 0.2)
 
     assert developer_liquid_salary == salaryCalculator.calculate(employee)
 
@@ -45,6 +45,6 @@ def test_calculate_developer_salary_below_salary_threshold():
 
     employee = Employee(role="Developer", base_salary=base_salary)
 
-    developer_liquid_salary = base_salary * 0.9
+    developer_liquid_salary = base_salary * (1 - 0.1)
 
     assert developer_liquid_salary == salaryCalculator.calculate(employee)
