@@ -11,3 +11,9 @@ def test_create_developer_employee():
     developer = Employee("Developer")
 
     assert developer.role == "Developer"
+
+
+def test_create_dba_employee():
+    dba = Employee("DBA")
+
+    assert dba.role == "DBA"
