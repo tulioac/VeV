@@ -1,3 +1,3 @@
 class Employee:
     def __init__(self, role="") -> None:
-        self.role = "Developer"
+        self.role = role
