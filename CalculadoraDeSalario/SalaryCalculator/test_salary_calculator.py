@@ -48,3 +48,13 @@ def test_calculate_developer_salary_below_salary_threshold():
     developer_liquid_salary = base_salary * (1 - 0.1)
 
     assert developer_liquid_salary == salaryCalculator.calculate(employee)
+
+
+def test_calculate_dba_salary_over_salary_threshold():
+    base_salary = 3_000
+
+    employee = Employee(role="DBA", base_salary=base_salary)
+
+    dba_liquid_salary = base_salary * (1 - 0.25)
+
+    assert dba_liquid_salary == salaryCalculator.calculate(employee)
