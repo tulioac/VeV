@@ -1,3 +1,5 @@
+import pytest
+
 from .employee import Employee
 
 
@@ -17,3 +19,8 @@ def test_create_dba_employee():
     dba = Employee("DBA")
 
     assert dba.role == "DBA"
+
+
+def test_create_invalid_role_employee():
+    with pytest.raises(Exception):
+        invalid_role_employee = Employee("Garbage Collector")
