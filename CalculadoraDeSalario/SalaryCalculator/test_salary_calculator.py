@@ -58,3 +58,13 @@ def test_calculate_dba_salary_over_salary_threshold():
     dba_liquid_salary = base_salary * (1 - 0.25)
 
     assert dba_liquid_salary == salaryCalculator.calculate(employee)
+
+
+def test_calculate_dba_salary_equals_salary_threshold():
+    base_salary = 2_000
+
+    employee = Employee(role="DBA", base_salary=base_salary)
+
+    dba_liquid_salary = base_salary * (1 - 0.25)
+
+    assert dba_liquid_salary == salaryCalculator.calculate(employee)
